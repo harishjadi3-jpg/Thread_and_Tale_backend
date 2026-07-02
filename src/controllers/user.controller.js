@@ -171,7 +171,8 @@ const LogginWithEmail = asyncHandler(async (req, res, next) => {
     const { accessToken, refreshToken } = await generateAccessTokenAndRefreshToken(existedUser._id);
     const options = {
         httpOnly: true,
-        secure: true
+        secure: true,
+        sameSite: "None",
     }
     const loggedInUser = await User.findById(existedUser._id)
         .select("-password -refreshToken"); // here see again you are trying to optimise this

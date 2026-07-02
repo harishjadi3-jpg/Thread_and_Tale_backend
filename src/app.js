@@ -7,7 +7,7 @@ const app = express()
 app.use(cors({
     origin: [
         "http://localhost:5173",
-        "https://thread-and-tale-frontend-git-main-harishjadi3-jpgs-projects.vercel.app"
+        "https://thread-and-tale-frontend.vercel.app"
     ],
     credentials: true
 }));
